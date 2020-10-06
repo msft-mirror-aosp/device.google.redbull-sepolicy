@@ -12,7 +12,7 @@ persist.vendor.audio.fluence.voicecomm          u:object_r:vendor_audio_prop:s0
 
 ro.boot.usbcontroller                           u:object_r:vendor_usb_prop:s0
 
-ro.boot.hardware.platform                       u:object_r:vendor_public_default_prop:s0
+ro.boot.hardware.platform                       u:object_r:vendor_hw_plat_prop:s0
 
 vendor.display.primary_red                      u:object_r:vendor_display_prop:s0
 vendor.display.primary_green                    u:object_r:vendor_display_prop:s0
@@ -38,7 +38,6 @@ ro.vendor.camera.req.fmq.size                   u:object_r:vendor_camera_ro_prop
 
 ro.vendor.build.type                            u:object_r:vendor_build_type_prop:s0
 
-ro.vendor.aware_available                       u:object_r:vendor_aware_available_prop:s0
 
 persist.vendor.modem.                           u:object_r:vendor_modem_prop:s0
 persist.vendor.mdm.                             u:object_r:vendor_modem_prop:s0
@@ -54,14 +53,20 @@ vendor.fpc_kpi                                  u:object_r:vendor_default_prop:s
 persist.vendor.verbose_logging_enabled          u:object_r:vendor_logging_prop:s0
 
 # Haptics HAL
-ro.vibrator.hal.closeloop.threshold             u:object_r:vendor_vibrator_prop:s0
-ro.vibrator.hal.config.dynamic                  u:object_r:vendor_vibrator_prop:s0
-ro.vibrator.hal.click.duration                  u:object_r:vendor_vibrator_prop:s0
-ro.vibrator.hal.tick.duration                   u:object_r:vendor_vibrator_prop:s0
-ro.vibrator.hal.heavyclick.duration             u:object_r:vendor_vibrator_prop:s0
-ro.vibrator.hal.short.voltage                   u:object_r:vendor_vibrator_prop:s0
-ro.vibrator.hal.long.voltage                    u:object_r:vendor_vibrator_prop:s0
-ro.vibrator.hal.long.frequency.shift            u:object_r:vendor_vibrator_prop:s0
-ro.vibrator.hal.effect.shape                    u:object_r:vendor_vibrator_prop:s0
-ro.vibrator.hal.steady.shape                    u:object_r:vendor_vibrator_prop:s0
-ro.vibrator.hal.lptrigger                       u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.closeloop.threshold      u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.config.dynamic           u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.click.duration           u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.tick.duration            u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.heavyclick.duration      u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.short.voltage            u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.long.voltage             u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.long.frequency.shift     u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.effect.shape             u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.steady.shape             u:object_r:vendor_vibrator_prop:s0
+ro.vendor.vibrator.hal.lptrigger                u:object_r:vendor_vibrator_prop:s0
+
+# Sensor
+vendor.sensor.                                  u:object_r:vendor_sensor_prop:s0
+
+# twoshay
+vendor.twoshay.study_group                      u:object_r:vendor_twoshay_prop:s0 exact bool

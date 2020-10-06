@@ -59,7 +59,6 @@ vendor.usb.                                     u:object_r:vendor_usb_prop:s0
 vendor.wlan.driver.version                      u:object_r:vendor_wifi_version:s0
 vendor.wlan.firmware.version                    u:object_r:vendor_wifi_version:s0
 vendor.radio                                    u:object_r:vendor_radio_prop:s0
-vendor.spcom.                                   u:object_r:spcomlib_prop:s0
 vendor.sys.modem.diag.                          u:object_r:vendor_modem_diag_prop:s0
 vendor.debug.ssrdump                            u:object_r:vendor_ssr_prop:s0
 
@@ -67,15 +66,14 @@ persist.vendor.sys.cnss.                        u:object_r:vendor_cnss_diag_prop
 persist.vendor.sys.crash_rcu                    u:object_r:vendor_ramdump_prop:s0
 persist.vendor.sys.ssr.                         u:object_r:vendor_ssr_prop:s0
 
-ctl.vendor.rmt_storage                          u:object_r:ctl_vendor_rmt_storage_prop:s0
 
-vendor.sys.adsp.firmware.version                u:object_r:vendor_public_system_prop:s0
+vendor.sys.adsp.firmware.version                u:object_r:vendor_adsp_version_prop:s0
 
 vendor.media.ecoservice.log.                    u:object_r:vendor_ecoservice_prop:s0
 
 persist.vendor.data.netmgr.log_to_file          u:object_r:vendor_default_prop:s0
 persist.vendor.ims.                             u:object_r:vendor_qcom_ims_prop:s0
-persist.vendor.qti.telephony.vt_cam_interface   u:object_r:vendor_public_default_prop:s0
+persist.vendor.qti.telephony.vt_cam_interface   u:object_r:vendor_telephony_vtcam_prop:s0
 
 # hvdcp_opti prop
 persist.vendor.hvdcp_opti.start                 u:object_r:vendor_hvdcp_opti_prop:s0

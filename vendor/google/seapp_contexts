@@ -14,14 +14,14 @@ user=_app seinfo=platform name=com.android.pixellogger domain=logger_app type=ap
 # Domain for GoogleCBRS app
 user=_app seinfo=platform name=com.google.googlecbrs domain=cbrs_setup_app type=app_data_file levelFrom=user
 
-# Domain for Touch app
-user=_app seinfo=platform name=com.google.touch.touchinspector domain=google_touch_app type=app_data_file levelFrom=user
-
 # Use a custom domain for GoogleCamera, to allow for Hexagon DSP access
 user=_app seinfo=google name=com.google.android.GoogleCamera domain=google_camera_app type=app_data_file levelFrom=all
 
 # Also allow GoogleCameraNext, the dogfood beta version, the same access as GoogleCamera
 user=_app seinfo=googlepulse name=com.google.android.apps.googlecamera.fishfood domain=google_camera_app type=app_data_file levelFrom=all
+
+# Domain for power stats service
+user=_app isPrivApp=true seinfo=platform name=com.android.powerstatsservice domain=powerstatsservice_app type=app_data_file levelFrom=all
 
 # Domain for Display
 user=_app seinfo=platform name=com.android.hbmsvmanager domain=hbmsvmanager_app type=app_data_file levelFrom=all
@@ -31,3 +31,6 @@ user=_app seinfo=platform name=com.google.android.uvexposurereporter domain=uv_e
 
 # Domain for DeviceDropMonitor service
 user=_app seinfo=platform name=com.google.android.devicedropmonitor domain=device_drop_monitor type=app_data_file levelFrom=all
+
+# Domain for IpHealthMonitor service
+user=_app seinfo=platform name=com.google.android.iphealthmonitor domain=ip_health_monitor type=app_data_file levelFrom=all
