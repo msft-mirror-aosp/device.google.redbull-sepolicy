@@ -9,6 +9,9 @@ add_hwservice(hal_wifi_ext, hal_wifi_ext_hwservice);
 
 # Allow wifi hal access to LOWI
 allow hal_wifi_ext location:unix_stream_socket connectto;
+allow hal_wifi_ext location:unix_dgram_socket sendto;
+allow hal_wifi_ext wifihal_socket:dir rw_dir_perms;
+allow hal_wifi_ext wifihal_socket:sock_file create_file_perms;
 
 # write to files owned by location daemon
 allow hal_wifi_ext location_socket:dir search;
@@ -22,3 +25,14 @@ r_dir_file(hal_wifi_ext, proc_wifi_dbg)
 
 # Allow wifi_ext to report callbacks to gril-service app
 binder_call(hal_wifi_ext, grilservice_app)
+
+# Allow hal_wifi to write into /dev/wlan
+allow hal_wifi_ext wlan_device:chr_file rw_file_perms;
+
+# Allow wifi_ext to read and write /data/vendor/firmware/wifi
+allow hal_wifi_ext updated_wifi_firmware_data_file:dir rw_dir_perms;
+allow hal_wifi_ext updated_wifi_firmware_data_file:file create_file_perms;
+
+# Allow wifi_ext to read the updated firmware files from app
+allow hal_wifi_ext priv_app:fd use;
+allow hal_wifi_ext privapp_data_file:file { read map };
